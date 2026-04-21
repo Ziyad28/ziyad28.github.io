@@ -83,12 +83,11 @@ header {
 }
 
 .hero-image img {
-  width:550px;
-  height: 750px;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
   border-radius: 20px;
   object-fit: cover;
-
-  
 }
 
 .btn {
@@ -145,6 +144,7 @@ header {
 .card p {
   color: gray;
   line-height: 1.6;
+  font-size: 16px;
 }
 
 .card a {
@@ -168,42 +168,9 @@ header {
   font-size: 14px;
 }
 
-@media (max-width: 800px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-links li {
-    margin: 8px 10px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 40px;
-  }
-
-  .hero-btns {
-    justify-content: center;
-  }
-
-  .hero-image img {
-    width: 260px;
-    height: 260px;
-  }
-}
 .contact-buttons {
   display: flex;
-  gap: 18px;
+  gap: 25px;
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -211,8 +178,10 @@ header {
 .contact-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 14px 24px;
+  height: 50px;
   border-radius: 16px;
   text-decoration: none;
   font-weight: bold;
@@ -236,30 +205,47 @@ header {
   font-size: 18px;
 }
 
-/* Email */
 .contact-btn.email {
   background: linear-gradient(135deg, #1f1f1f, #444444);
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
 }
 
-/* Call */
 .contact-btn.call {
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
   box-shadow: 0 0 18px rgba(124, 58, 237, 0.28);
 }
 
-/* WhatsApp */
 .contact-btn.whatsapp {
   background: linear-gradient(135deg, #16a34a, #22c55e);
   box-shadow: 0 0 18px rgba(34, 197, 94, 0.3);
 }
-.contact-btn {
-  height: 50px;
-}
-.contact-buttons {
-  gap: 25px;
-}
-.card p {
-  color: gray;
-  font-size: 16px;
+
+@media (max-width: 900px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    margin: 8px 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+  }
 }
