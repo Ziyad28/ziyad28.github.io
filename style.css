@@ -221,22 +221,44 @@ header {
 }
 
 @media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .logo {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
   .nav-links {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
+    padding: 0;
   }
 
   .nav-links li {
-    margin: 8px 10px;
+    margin: 0;
   }
 
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 50px 0;
+    gap: 30px;
   }
 
   .hero-content h1 {
     font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
   }
 
   .hero-btns {
@@ -244,8 +266,8 @@ header {
   }
 
   .hero-image img {
-    max-width: 280px;
     width: 100%;
+    max-width: 260px;
     height: auto;
   }
 }
