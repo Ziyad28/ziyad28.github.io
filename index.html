@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziyad Alghadban | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+ <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div class="container">
     <header>
-      <div class="logo">ZIYAD ALGHADHBAN</div>
+      <div class="logo">
+        <img src="logo.png" alt="Z Logo">
+      </div>
+
       <nav>
         <ul class="nav-links">
           <li><a href="#projects">Projects</a></li>
@@ -27,6 +30,7 @@
         <p>
           Software Engineering student focused on backend development and building real-world systems.
         </p>
+
         <div class="hero-btns">
           <a href="#projects" class="btn btn-black">View Projects</a>
           <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -34,80 +38,99 @@
       </div>
 
       <div class="hero-image">
-        <img src="MyImage.jpeg" alt="Ziyad Profile" />
+        <img src="myphoto.jpeg" alt="Ziyad Profile">
       </div>
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h2 class="section-title">Projects</h2>
 
-      <div class="card">
-        <h3>Smart Recommendation System</h3>
-        <p>
-          AI-based system that recommends the best restaurants and coffee shops
-          based on ratings, reviews, and user preferences.
-        </p>
-        <a href="https://smart-recommendation-system-bfau.onrender.com" target="_blank">Live Demo →</a>
-        <a href="https://github.com/Ziyad28/smart-recommendation-system" target="_blank">GitHub →</a>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Smart Recommendation System</h3>
+          <p>
+            AI-based system that recommends the best restaurants and coffee shops
+            based on ratings, reviews, and user preferences.
+          </p>
+
+          <div class="project-links">
+            <a href="https://smart-recommendation-system-bfau.onrender.com" target="_blank">Live Website →</a>
+            <a href="https://github.com/Ziyad28/smart-recommendation-system" target="_blank">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>CV Website</h3>
+          <p>
+            A personal portfolio website designed to showcase my projects and skills
+            with a clean and modern user interface.
+          </p>
+
+          <div class="project-links">
+            <a href="https://ziyad28.github.io/" target="_blank">Live Website →</a>
+            <a href="https://github.com/Ziyad28/ziyad28.github.io" target="_blank">GitHub →</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="quick-info">
-        <div class="chip">Java</div>
-        <div class="chip">Spring Boot</div>
-        <div class="chip">REST APIs</div>
-        <div class="chip">HTML</div>
-        <div class="chip">CSS</div>
-        <div class="chip">Git</div>
-        <div class="chip">GitHub</div>
-        <div class="chip">Backend Development</div>
-        <div class="chip">Problem Solving</div>
-      </div>
-    </section>
+  <h2 class="section-title">Skills</h2>
+
+  <div class="quick-info">
+    <div class="chip frontend">HTML</div>
+    <div class="chip frontend">CSS</div>
+    <div class="chip frontend">JavaScript</div>
+    <div class="chip frontend">Responsive Design</div>
+    <div class="chip frontend">UI/UX Design</div>
+
+    <div class="chip backend">Java</div>
+    <div class="chip backend">Spring Boot</div>
+    <div class="chip backend">REST API Development</div>
+    <div class="chip backend">API Design</div>
+
+    <div class="chip tools">Git</div>
+    <div class="chip tools">GitHub</div>
+  </div>
+</section>
 
     <section id="certifications" class="section">
-      <h2>Certifications</h2>
+      <h2 class="section-title">Certifications</h2>
 
-      <div class="card">
-        <h3>AWS Cloud</h3>
-        <p>Professional training in Amazon Web Services infrastructure.</p>
-        <a href="aws.pdf" target="_blank">Open Certificate</a>
-      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h3>AWS Cloud</h3>
+          <p>Professional training in Amazon Web Services infrastructure.</p>
+          <a href="aws.pdf" target="_blank">Open Certificate</a>
+        </div>
 
-      <div class="card">
-        <h3>Doroob Training</h3>
-        <p>Professional development and technical skills certification.</p>
-        <a href="doroob_certificate.pdf" target="_blank">Open Certificate</a>
+        <div class="cert-card">
+          <h3>Doroob Training</h3>
+          <p>Professional development and technical skills certification.</p>
+          <a href="doroob_certificate.pdf" target="_blank">Open Certificate</a>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="section">
-      <div class="card">
-        <h2>Experience</h2>
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-box">
         <p>
-          Developed academic and personal software projects with a focus on backend development,
+          Developed academic and personal software projects with a focus on Full-Satck development,
           recommendation systems, REST APIs, and web applications.
         </p>
       </div>
 
-     <div class="contact-buttons">
-  <a href="mailto:lzyad717@gmail.com" class="contact-btn email">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email Icon" class="contact-icon">
-    Email Me
-  </a>
+      <h2 class="section-title contact-title">Contact</h2>
 
-  <a href="tel:0509531424" class="contact-btn call">
-    <span class="phone-icon">📞</span>
-    Call Me
-  </a>
-
-  <a href="https://wa.me/966509531424" target="_blank" class="contact-btn whatsapp">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp Icon" class="contact-icon">
-    WhatsApp
-  </a>
-</div>
+      <div class="contact-buttons">
+        <a href="mailto:lzyad717@gmail.com" class="contact-btn email">Email Me</a>
+        <a href="tel:0509531424" class="contact-btn call">Call Me</a>
+        <a href="https://wa.me/966509531424" target="_blank" class="contact-btn whatsapp">WhatsApp</a>
+      </div>
+    </section>
+  </div>
 
 </body>
 </html>
