@@ -115,13 +115,13 @@ header {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 80px 0; /* زيادة المسافة بين الأقسام لراحة العين */
 }
 
 .section-title {
   text-align: center;
   font-size: 46px;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 .projects-grid {
@@ -185,10 +185,6 @@ header {
   transition: 0.3s ease;
 }
 
-.chip:hover {
-  transform: scale(1.08);
-}
-
 .frontend {
   background: lightblue;
   color: navy;
@@ -203,24 +199,10 @@ header {
   background: lightgray;
   color: black;
 }
-.chip:hover {
-  transform: scale(1.06);
-}
 
-.frontend:hover {
-  background: blue;
-  color: white;
-}
-
-.backend:hover {
-  background: purple;
-  color: white;
-}
-
-.tools:hover {
-  background: black;
-  color: lightgray;
-}
+.frontend:hover { background: blue; color: white; }
+.backend:hover { background: purple; color: white; }
+.tools:hover { background: black; color: lightgray; }
 
 .cert-grid {
   display: grid;
@@ -235,11 +217,6 @@ header {
   text-align: left;
   min-height: 180px;
   transition: 0.3s ease;
-}
-
-.cert-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px lightgray;
 }
 
 .cert-card h3 {
@@ -260,23 +237,68 @@ header {
   font-weight: bold;
 }
 
-.experience-box {
-  border: 1px solid lightgray;
-  border-radius: 20px;
-  padding: 25px;
-  text-align: center;
-  margin-bottom: 35px;
+/* --- تنسيق الـ Experience Timeline الجديد --- */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
 }
 
-.experience-box p {
+/* الخط العمودي الرئيسي */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 2px;
+  height: 100%;
+  background-color: #ddd;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+/* النقطة (Bullet) */
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background-color: purple;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 2;
+}
+
+.timeline-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.timeline-content h3 span {
+  font-size: 16px;
   color: gray;
-  font-size: 18px;
+  font-weight: normal;
+}
+
+.timeline-content ul {
+  list-style: none;
+  color: gray;
+  font-size: 17px;
   line-height: 1.8;
 }
 
-.contact-title {
-  margin-top: 10px;
+.timeline-content ul li::before {
+  content: '- ';
+  margin-right: 5px;
 }
+
+/* ------------------------------------------ */
 
 .contact-buttons {
   display: flex;
@@ -294,69 +316,13 @@ header {
   transition: 0.3s ease;
 }
 
-.contact-btn:hover {
-  transform: scale(1.06);
-}
-
-.contact-btn.email {
-  background: black;
-}
-
-.contact-btn.call {
-  background: purple;
-}
-
-.contact-btn.whatsapp {
-  background: green;
-}
+.contact-btn.email { background: black; }
+.contact-btn.call { background: purple; }
+.contact-btn.whatsapp { background: green; }
 
 @media (max-width: 900px) {
-  header {
-    flex-direction: column;
-    gap: 18px;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 0;
-  }
-
-  .hero-content p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-btns {
-    justify-content: center;
-  }
-
-  .hero-content h1 {
-    font-size: 42px;
-  }
-
-  .hero-image img {
-    max-width: 280px;
-  }
-
-  .projects-grid,
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 34px;
-  }
-
-  .project-card,
-  .cert-card {
-    min-height: auto;
-  }
+  header { flex-direction: column; gap: 18px; }
+  .hero { flex-direction: column; text-align: center; }
+  .projects-grid, .cert-grid { grid-template-columns: 1fr; }
+  .hero-content h1 { font-size: 42px; }
 }
