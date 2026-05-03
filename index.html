@@ -4,22 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ziyad Alghadban | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div class="container">
     <header>
       <div class="logo">
-        <img src="Logo.png" alt="Z Logo">
+<img src="Logo.png" alt="Z Logo">
       </div>
 
-      <nav>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <nav id="navMenu">
         <ul class="nav-links">
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#experience">Experience</a></li> <!-- تحديث الرابط -->
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -116,11 +118,10 @@
       </div>
     </section>
 
-    <!-- قسم الخبرة بتنسيق الـ Timeline الجديد -->
     <section id="experience" class="section">
       <h2 class="section-title">Experience</h2>
+
       <div class="timeline">
-        
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -142,7 +143,6 @@
             </ul>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -154,8 +154,22 @@
         <a href="tel:0509531424" class="contact-btn call">Call Me</a>
         <a href="https://wa.me/966509531424" target="_blank" class="contact-btn whatsapp">WhatsApp</a>
       </div>
+
+    <form class="contact-form" id="contactForm" 
+      action="https://formspree.io/f/mvzlzbdq" 
+      method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    </form>
+
+<p id="formMessage"></p>
+
+      <p id="formMessage"></p>
     </section>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
