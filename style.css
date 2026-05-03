@@ -192,9 +192,15 @@ header {
   padding: 12px 18px;
   border-radius: 999px;
   font-size: 15px;
-  transition: 0.3s ease;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.25s ease;
 }
 
+.chip:active {
+  transform: scale(0.95);
+}
 .frontend {
   background: lightblue;
   color: navy;
@@ -399,10 +405,10 @@ header {
   header {
     flex-direction: row;
   }
-
-  .menu-toggle {
-    display: block;
-  }
+.menu-toggle.active {
+  color: purple;
+}
+ 
 
   nav {
     display: none;
@@ -440,4 +446,11 @@ header {
   .cert-grid {
     grid-template-columns: 1fr;
   }
+  .menu-toggle {
+  color: black; 
+}
+
+.menu-toggle.active {
+  color: purple;
+}
 }
