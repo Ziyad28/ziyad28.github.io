@@ -25,6 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 25px 0;
+  position: relative;
 }
 
 .logo img {
@@ -42,6 +43,15 @@ header {
 .nav-links a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
   font-weight: bold;
 }
 
@@ -115,7 +125,7 @@ header {
 }
 
 .section {
-  padding: 80px 0; /* زيادة المسافة بين الأقسام لراحة العين */
+  padding: 80px 0;
 }
 
 .section-title {
@@ -200,9 +210,20 @@ header {
   color: black;
 }
 
-.frontend:hover { background: blue; color: white; }
-.backend:hover { background: purple; color: white; }
-.tools:hover { background: black; color: lightgray; }
+.frontend:hover {
+  background: blue;
+  color: white;
+}
+
+.backend:hover {
+  background: purple;
+  color: white;
+}
+
+.tools:hover {
+  background: black;
+  color: lightgray;
+}
 
 .cert-grid {
   display: grid;
@@ -217,6 +238,11 @@ header {
   text-align: left;
   min-height: 180px;
   transition: 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px lightgray;
 }
 
 .cert-card h3 {
@@ -237,7 +263,6 @@ header {
   font-weight: bold;
 }
 
-/* --- تنسيق الـ Experience Timeline الجديد --- */
 .timeline {
   max-width: 800px;
   margin: 0 auto;
@@ -245,7 +270,6 @@ header {
   padding-left: 30px;
 }
 
-/* الخط العمودي الرئيسي */
 .timeline::before {
   content: '';
   position: absolute;
@@ -262,7 +286,6 @@ header {
   padding-left: 20px;
 }
 
-/* النقطة (Bullet) */
 .timeline-dot {
   position: absolute;
   left: -32px;
@@ -298,8 +321,6 @@ header {
   margin-right: 5px;
 }
 
-/* ------------------------------------------ */
-
 .contact-buttons {
   display: flex;
   justify-content: center;
@@ -316,54 +337,107 @@ header {
   transition: 0.3s ease;
 }
 
-.contact-btn.email { background: black; }
-.contact-btn.call { background: purple; }
-.contact-btn.whatsapp { background: green; }
+.contact-btn.email {
+  background: black;
+}
 
-@media (max-width: 768px) {
-  
+.contact-btn.call {
+  background: purple;
+}
+
+.contact-btn.whatsapp {
+  background: green;
+}
+
+.contact-form {
+  max-width: 550px;
+  margin: 35px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: purple;
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  border-radius: 16px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#formMessage {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
   header {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 0;
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 220px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 18px;
+    box-shadow: 0 8px 18px lightgray;
+    padding: 18px;
+    z-index: 100;
+  }
+
+  nav.active {
+    display: block;
   }
 
   .nav-links {
-    gap: 10px;
-    font-size: 14px;
+    flex-direction: column;
+    gap: 18px;
   }
-
 
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 40px 0;
-    gap: 30px;
   }
 
   .hero-content h1 {
-    font-size: 38px; 
+    font-size: 42px;
   }
 
-  .hero-content p {
-    font-size: 16px;
-    margin: 0 auto 20px auto;
-  }
-
-  .hero-btns {
-    justify-content: center;
-  }
-
-  .hero-image img {
-    max-width: 250px; 
-  }
-
-  .projects-grid {
+  .projects-grid,
+  .cert-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .section-title {
-    font-size: 30px;
   }
 }
