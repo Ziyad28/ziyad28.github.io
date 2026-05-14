@@ -1,0 +1,490 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  color: black;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  position: relative;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: purple;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 70px 0;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+  color: purple;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: gray;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 13px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-black {
+  background: black;
+  color: white;
+}
+
+.btn-outline {
+  border: 1px solid black;
+  color: black;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+}
+
+/* Sections */
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 46px;
+  margin-bottom: 45px;
+}
+
+/* Projects & Certifications */
+
+.projects-grid,
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.project-card,
+.cert-card {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.project-card:hover,
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px lightgray;
+}
+
+.nav-links a:hover {
+  color: purple;
+}
+.project-card h3,
+.cert-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.project-card p,
+.cert-card p {
+  color: gray;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.project-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-links a,
+.cert-card a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.project-links a:hover,
+.cert-card a:hover {
+  color: purple;
+}
+
+/* Skills */
+
+.quick-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.chip {
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  border: 1px solid lightgray;
+}
+
+.frontend {
+  background: aliceblue;
+  color: steelblue;
+}
+
+.backend {
+  background: lavender;
+  color: purple;
+}
+
+.tools {
+  background: whitesmoke;
+  color: dimgray;
+}
+
+.frontend:hover,
+.backend:hover,
+.tools:hover {
+  background: #0F172A;
+  color: white;
+}
+
+/* Experience */
+
+.timeline {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 2px;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background-color:purple;
+;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.timeline-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.timeline-content h3 span {
+  font-size: 16px;
+  color: gray;
+  font-weight: normal;
+}
+
+.timeline-content ul {
+  list-style: none;
+  color: gray;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.timeline-content ul li::before {
+  content: '- ';
+}
+
+/* Contact */
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.contact-btn {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+.contact-btn.email {
+  background: black;
+}
+
+.contact-btn.call {
+  background:purple;
+;
+}
+
+.contact-btn.whatsapp {
+  background: green;
+}
+
+.contact-form {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: purple;
+;
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  border-radius: 16px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background:  purple;
+;
+}
+
+#formMessage {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+.error-msg {
+  color: red;
+}
+
+/* GitHub / LinkedIn / CV */
+
+.mini-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.mini-social-links a {
+  text-decoration: none;
+  color: gray;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.mini-social-links a:hover {
+  color: purple;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 20px 0 50px;
+}
+
+footer h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+footer p {
+  color: gray;
+  font-size: 15px;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
+    color: black;
+  }
+
+  .menu-toggle.active {
+  color: purple;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 220px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 18px;
+    box-shadow: 0 8px 18px lightgray;
+    padding: 18px;
+    z-index: 100;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .projects-grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
